@@ -46,11 +46,16 @@ db.createUser({user:"rodrigo",pwd:"123",roles:[{role:"readWrite",db:"dbaula4"}]}
 ________________________________________________________________________________________________________________________________________
 // roles existentes
 
-ROLE		DESCRIÇÃO DESSE PERFIL
-read		Você consegue ler todos os dados de um determinado banco de dados utilizando find
-readWrite	Você consegue fazer CRUD em um ou mais bancos de dados específicos
-dbAdmin		Esse perfil é administrador de um banco de dados específico
-root		Pode fazer qualquer coisa no seu banco de dados
+ROLE--------DESCRIÇÃO DESSE PERFIL
+
+read--------Você consegue ler todos os dados de um determinado banco de dados utilizando find
+
+readWrite---Você consegue fazer CRUD em um ou mais bancos de dados específicos
+
+dbAdmin-----Esse perfil é administrador de um banco de dados específico
+
+root--------Pode fazer qualquer coisa no seu banco de dados
+
 ________________________________________________________________________________________________________________________________________
 // verifica se usuário pode autenticar 
 //se retornar 1 pode, senão retorna 0 e ERROR: authentication failed
