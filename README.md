@@ -1,4 +1,4 @@
-# mongodb
+# MONGODB
 
 # para disparar o banco
 C:\Program Files\MongoDB\Server\3.6\bin>mongod
