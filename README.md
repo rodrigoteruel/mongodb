@@ -1,39 +1,39 @@
 # mongodb
 
-#para disparar o banco
+# para disparar o banco
 C:\Program Files\MongoDB\Server\3.6\bin>mongod
 
-#para entrar no modo consulta por comand line
+# para entrar no modo consulta por comand line
 mongo 
 
-#seta o banco que o mongo vai consultar
+# seta o banco que o mongo vai consultar
 use dbaula3
 
-#find sort decrescente
+# find sort decrescente
 db.aluno.find().sort({"nome":-1})
 
-#find sort crescente
+# find sort crescente
 db.aluno.find().sort({"nome":1})
 
-#find por campo
+# find por campo
 db.aluno.find({"nome":"Rodrigo"})
 
-#conta quantos registros tem
+# conta quantos registros tem
 db.aluno.find().count()
 
-#mostra todos
+# mostra todos
 db.aluno.find()
 
-#mostra mais bonitinho
+# mostra mais bonitinho
 db.aluno.find().pretty()
 
-#lista os usuarios da base
+# lista os usuarios da base
 db.getUsers()
 
-#cria um usuário com regras de permissão em um dado banco
+# cria um usuário com regras de permissão em um dado banco
 db.createUser({user:"rodrigo",pwd:"123",roles:[{role:"readWrite",db:"dbaula4"}]})
 
-#roles existentes
+# roles existentes
 ROLE--------DESCRIÇÃO DESSE PERFIL
 
 read--------Você consegue ler todos os dados de um determinado banco de dados utilizando find
@@ -48,7 +48,7 @@ root--------Pode fazer qualquer coisa no seu banco de dados
 # verifica se usuário pode autenticar se retornar 1 pode, senão retorna 0 e ERROR: authentication failed
 db.auth("rodrigo","123")
 
-#cria usuário setando o base de dados customData 
+# cria usuário setando o base de dados customData 
 db.createUser({user:"rodroga",pwd:"123",customData:{db:"dbaula4"},roles:[{role:"readWrite",db:"dbaula4"}]})
 
 
