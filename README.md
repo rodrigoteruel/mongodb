@@ -1,51 +1,39 @@
 # mongodb
-________________________________________________________________________________________________________________________________________
-//para disparar o banco
 
+#para disparar o banco
 C:\Program Files\MongoDB\Server\3.6\bin>mongod
-________________________________________________________________________________________________________________________________________
-//para entrar no modo consulta por comand line
 
+#para entrar no modo consulta por comand line
 mongo 
-________________________________________________________________________________________________________________________________________
-//seta o banco que o mongo vai consultar
 
+#seta o banco que o mongo vai consultar
 use dbaula3
-________________________________________________________________________________________________________________________________________
-//find sort decrescente
 
+#find sort decrescente
 db.aluno.find().sort({"nome":-1})
-________________________________________________________________________________________________________________________________________
-//find sort crescente
 
+#find sort crescente
 db.aluno.find().sort({"nome":1})
-________________________________________________________________________________________________________________________________________
-//find por campo
 
+#find por campo
 db.aluno.find({"nome":"Rodrigo"})
-________________________________________________________________________________________________________________________________________
-//conta quantos registros tem
 
+#conta quantos registros tem
 db.aluno.find().count()
-________________________________________________________________________________________________________________________________________
-//mostra todos
 
+#mostra todos
 db.aluno.find()
-________________________________________________________________________________________________________________________________________
-//mostra mais bonitinho
 
+#mostra mais bonitinho
 db.aluno.find().pretty()
-________________________________________________________________________________________________________________________________________
-//lista os usuarios da base
 
+#lista os usuarios da base
 db.getUsers()
-________________________________________________________________________________________________________________________________________
-//cria um usuário com regras de permissão em um dado banco
 
+#cria um usuário com regras de permissão em um dado banco
 db.createUser({user:"rodrigo",pwd:"123",roles:[{role:"readWrite",db:"dbaula4"}]})
-________________________________________________________________________________________________________________________________________
-// roles existentes
 
+#roles existentes
 ROLE--------DESCRIÇÃO DESSE PERFIL
 
 read--------Você consegue ler todos os dados de um determinado banco de dados utilizando find
@@ -56,14 +44,11 @@ dbAdmin-----Esse perfil é administrador de um banco de dados específico
 
 root--------Pode fazer qualquer coisa no seu banco de dados
 
-________________________________________________________________________________________________________________________________________
-// verifica se usuário pode autenticar 
-//se retornar 1 pode, senão retorna 0 e ERROR: authentication failed
 
+# verifica se usuário pode autenticar se retornar 1 pode, senão retorna 0 e ERROR: authentication failed
 db.auth("rodrigo","123")
-________________________________________________________________________________________________________________________________________
 
-//cria usuário setando o base de dados customData 
-
+#cria usuário setando o base de dados customData 
 db.createUser({user:"rodroga",pwd:"123",customData:{db:"dbaula4"},roles:[{role:"readWrite",db:"dbaula4"}]})
-________________________________________________________________________________________________________________________________________
+
+
