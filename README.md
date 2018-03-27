@@ -52,3 +52,15 @@ db.auth("rodrigo","123")
 db.createUser({user:"rodroga",pwd:"123",customData:{db:"dbaula4"},roles:[{role:"readWrite",db:"dbaula4"}]})
 
 
+# importar arquivo csv
+
+mongoimport -d dbaula5 -c ubs --type csv --file ubs.csv --headerline
+
+# buscar quantidade limite de registro
+
+db.ubs.find().limit(2).pretty()
+
+# buscar campo onde contém ocidental, independente do que tem antes ou depois do que está escrito.
+
+db.ubs.find({"municipio":/OCIDENTAL/})
+
