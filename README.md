@@ -82,4 +82,16 @@ mongodb://<dbuser>:<dbpassword>@ds227199.mlab.com:27199/teruelrodrigo
 use teruelrodrigo
 
 db.colect.find().pretty()
+
+# Criar index para melhorar resposta da busca
+
+db.aula8.createIndex({"roles.functionalities.name": 1})
+
+# ver os Index
+
+db.colect.getIndexes()
+
+# drop Index (REMOÇÃO DA INDEX)
+
+db.colect.dropIndex({"roles.functionalities.name": 1})
   
