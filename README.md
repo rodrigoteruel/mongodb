@@ -71,6 +71,8 @@ db.colect.update({"name": "trocado"},{$set:{"idade":37}})
 # MLAB free 500mg
 
 mongo ds227199.mlab.com:27199/teruelrodrigo -u <dbuser> -p <dbpassword>
+  
 use teruelrodrigo
+
 db.colect.find().pretty()
   
