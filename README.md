@@ -64,3 +64,6 @@ db.ubs.find().limit(2).pretty()
 
 db.ubs.find({"municipio":/OCIDENTAL/})
 
+# update field
+
+db.colect.update({"name": "trocado"},{$set:{"idade":37}})
