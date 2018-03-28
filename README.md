@@ -70,7 +70,14 @@ db.colect.update({"name": "trocado"},{$set:{"idade":37}})
 
 # MLAB free 500mg
 
+## To connect using the mongo shell:
+
 mongo ds227199.mlab.com:27199/teruelrodrigo -u <dbuser> -p <dbpassword>
+  
+## To connect using a driver via the standard MongoDB URI (what's this?):
+
+mongodb://<dbuser>:<dbpassword>@ds227199.mlab.com:27199/teruelrodrigo
+
   
 use teruelrodrigo
 
