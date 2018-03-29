@@ -95,3 +95,19 @@ db.colect.getIndexes()
 
 db.colect.dropIndex({"roles.functionalities.name": 1})
   
+# agrega grupo campos comuns e soma amount
+
+db.order.aggregate([
+    {$group : { _id : "$cust_id", total : {$sum : "$amount"}}}
+])
+
+# agregando escolhendo match específico
+
+db.order.aggregate([
+    {$match : {status: "B"}},
+    {$group : { _id : "$cust_id", total : {$sum : "$amount"}}}
+])
+
+# distinct
+
+db.order.distinct("cust_id")
