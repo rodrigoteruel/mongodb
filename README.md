@@ -111,3 +111,44 @@ db.order.aggregate([
 # distinct
 
 db.order.distinct("cust_id")
+
+# Replicas entre bancos mongodb
+
+### db1 primary
+
+sudo nano /etc/mongod.conf
+
+- setar port e bindIp com ip interno
+- tirar hashtag de replication e escrever replSetName: rs0
+- sudo service mongod restart
+
+- conectar: mongo --host ip:port
+
+- inicializar réplica: rs.initiate()
+
+- adicionar réplica 2: rs.add("ip exertno db2:port")
+- adicionar réplica 3: rs.add("ip exertno db3:port")
+
+- configurar réplicas: rs.config()
+
+- conferir com: rs.status()
+
+### db2 secondary
+
+sudo nano /etc/mongod.conf
+
+- setar port e bindIp com ip interno
+- tirar hashtag de replication e escrever replSetName: rs0
+- sudo service mongod restart
+
+- db.getMongo().setSlaveOk()
+
+### db3 secondary
+
+sudo nano /etc/mongod.conf
+
+- setar port e bindIp com ip interno
+- tirar hashtag de replication e escrever replSetName: rs0
+- sudo service mongod restart
+
+- db.getMongo().setSlaveOk()
